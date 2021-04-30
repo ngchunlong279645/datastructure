@@ -25,9 +25,9 @@ public class PersonList {
 	        return false;
 	}
 	
-	public void addFirst(String name, int age, char gender) {
+	public void addFirst(String firstName, String lastName, int age, char gender, String email, int accNum, int phoneNum, String accType) {
 		if (isEmpty( )) {
-	       	 myList[0]=new Person(name,age,gender);                                                                    
+	       	 myList[0]=new Person(firstName,lastName,age,gender,email,accNum,phoneNum,accType);                                                                    
 	       	 num++;
 		 }
 		else if(isFull( )) {                                    
@@ -37,14 +37,14 @@ public class PersonList {
 	    	 for(int i=num;i>0;i--) {
 	    		 myList[i]=myList[i-1];
 	    	 }
-	    	 myList[0]=new Person(name,age,gender);                                  
+	    	 myList[0]=new Person(firstName,lastName,age,gender,email,accNum,phoneNum,accType);                                  
 	  	     num++;
 	     }     
 	}
 	
-	public void addBtw(int index,String name, int age, char gender) {
+	public void addBtw(int index,String firstName, String lastName, int age, char gender, String email, int accNum, int phoneNum, String accType) {
 		if (isEmpty( )) {
-	       	 myList[0]=new Person(name,age,gender);                                                                                
+	       	 myList[0]=new Person(firstName,lastName,age,gender,email,accNum,phoneNum,accType);                                                                                
 	       	 num++;
 		 } 
 		 else if(isFull( )) {                                    
@@ -55,21 +55,21 @@ public class PersonList {
 	    	 for(int i=num;i>index;i--) {
 	    		 myList[i]=myList[i-1];
 	    	 }
-	    	 myList[index]=new Person(name,age,gender);                                         
+	    	 myList[index]=new Person(firstName,lastName,age,gender,email,accNum,phoneNum,accType);                                         
 	  	     num++;
 	     }     
 	}
 	
-	public void addLast(String name, int age, char gender) {
+	public void addLast(String firstName, String lastName, int age, char gender, String email, int accNum, int phoneNum, String accType) {
 		 if (isEmpty( )) {
-	       	 myList[0]=new Person(name,age,gender);                                                                              
+	       	 myList[0]=new Person(firstName,lastName,age,gender,email,accNum,phoneNum,accType);                                                                              
 	       	 num++;
 		 }  	 
 	     else if(isFull( )) {                                    
 	    	  System.out.println("List is full");
 	     }
 	     else {	
-	    	  myList[num]=new Person(name,age,gender);                                  
+	    	  myList[num]=new Person(firstName,lastName,age,gender,email,accNum,phoneNum,accType);                                  
 	  	      num++;
 	     }     
 	}	
@@ -104,25 +104,36 @@ public class PersonList {
 	} 
 	
 	public void search(int index){
-		  System.out.println("\nName ="+myList[index].getName());
+		  System.out.println("\nFirst Name ="+myList[index].getFirstName());
+		  System.out.println("\nLast Name ="+myList[index].getLastName());
 		  System.out.println("Age = "+myList[index].getAge());
-		  System.out.println("Gender = "+myList[index].getGender());                                               
+		  System.out.println("Gender = "+myList[index].getGender());
+		  System.out.println("\nEmail ="+myList[index].getEmail());
+		  System.out.println("\nAccount Number ="+myList[index].getAccNum());
+		  System.out.println("\nPhone Number ="+myList[index].getPhoneNum());
+		  System.out.println("\nAccount Type ="+myList[index].getAccType());
 	}
 	
-	public void edit(int index,String name, int age, char gender) {
+	public void edit(int index,String firstName, String lastName, int age, char gender, String email, int accNum, int phoneNum, String accType) {
 		if (isEmpty( ))                                                             	
 			System.out.println("List is empty");      
 		else
-			myList[index]=new Person(name,age,gender);  
+			myList[index]=new Person(firstName,lastName,age,gender,email,accNum,phoneNum,accType);  
 	}
 
     public void displayRecord(){
     if(num!=0) {	
     	for (int i= 0; i< num; i++){
     		System.out.println("\nNO : "+i);
-    		System.out.println("Name ="+myList[i].getName());
+    		System.out.println("First Name ="+myList[i].getFirstName());
+    		System.out.println("Last Name ="+myList[i].getLastName());
     		System.out.println("Age = "+myList[i].getAge());
     		System.out.println("Gender = "+myList[i].getGender());
+    		System.out.println("Email = "+myList[i].getEmail());
+    		System.out.println("Account Number = "+myList[i].getAccNum());
+    		System.out.println("Phone Number = "+myList[i].getPhoneNum());
+    		System.out.println("Account Type = "+myList[i].getAccType());
+    		
     	}
     }
     else {

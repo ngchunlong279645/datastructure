@@ -4,9 +4,14 @@ import java.util.Scanner;
 
 public class Main {
 	
-	 static String name=null;
+	 static String firstName=null;
+	 static String lastName=null;
      static int age;
 	 static char gender;
+	 static String email=null;
+	 static int accNum;
+	 static int phoneNum;
+	 static String accType;
 	 static int index;
 	 static int size=100;
 	 static char choice;
@@ -23,16 +28,16 @@ public class Main {
 			 int option = scan.nextInt();
 			 if(option==1) {
 				    setInfo();
-			 		people.addFirst(name, age, gender); 
+			 		people.addFirst(firstName,lastName,age,gender,email,accNum,phoneNum,accType); 
 			 }
 			 else if(option==2) {
 				 	setIndex();
 				    setInfo();
-		 			people.addBtw(index, name, age, gender);
+		 			people.addBtw(index,firstName,lastName,age,gender,email,accNum,phoneNum,accType);
 			 }
 			 else if(option==3) {
 				 	setInfo();
-			 		people.addLast(name, age, gender);
+			 		people.addLast(firstName,lastName,age,gender,email,accNum,phoneNum,accType);
 			 }
 			 else if(option==4) {
 				 	people.removeFirst();
@@ -47,7 +52,7 @@ public class Main {
 			 else if(option==7) {
 				 	setIndex();
 			 		setInfo();
-			 		people.edit(index, name, age, gender);
+			 		people.edit(index,firstName,lastName,age,gender,email,accNum,phoneNum,accType);
 			 }
 			 else if(option==8) {
 				 	setIndex();
@@ -63,12 +68,22 @@ public class Main {
 	
 	public static void setInfo() {
 		Scanner scan = new Scanner(System.in);
-		System.out.print("Enter name = ");
- 		name = scan.next();
+		System.out.print("Enter first name = ");
+ 		firstName = scan.next();
+ 		System.out.print("Enter last name = ");
+ 		lastName = scan.next();
  		System.out.print("Enter age = ");
  		age = scan.nextInt();
  		System.out.print("Enter gender = ");
  		gender = scan.next().charAt(0);
+ 		System.out.print("Enter email = ");
+ 		email = scan.next();
+ 		System.out.print("Enter account number = ");
+ 		accNum = scan.nextInt();
+ 		System.out.print("Enter phone number = ");
+ 		phoneNum = scan.nextInt();
+ 		System.out.print("Enter account type = ");
+ 		accType = scan.next();
 	}
 	
 	public static void setIndex() {
