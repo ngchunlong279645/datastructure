@@ -119,7 +119,8 @@ public class PersonList {
     public void displayRecord(){
     if(num!=0) {	
     	for (int i= 0; i< num; i++){
-    		System.out.println("\nName ="+myList[i].getName());
+    		System.out.println("\nNO : "+i);
+    		System.out.println("Name ="+myList[i].getName());
     		System.out.println("Age = "+myList[i].getAge());
     		System.out.println("Gender = "+myList[i].getGender());
     	}
