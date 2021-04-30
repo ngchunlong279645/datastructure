@@ -91,4 +91,5 @@ public class Main {
 		System.out.println("Enter index :");
  		index=scan.nextInt();
 	}
+	
 }

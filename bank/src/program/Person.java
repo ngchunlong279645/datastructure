@@ -20,6 +20,7 @@ public class Person {
 		phoneNum = newPhoneNum;
 		accType = newAccType;
 	}
+	
 	public String getFirstName(){
 		return firstName;
 	} 
@@ -28,15 +29,14 @@ public class Person {
 		return lastName;
 	}
 
-	public int getAge()
-	{
+	public int getAge(){
 		return age;
 	}
 	
-	public char getGender()
-	{
+	public char getGender(){
 		return gender;
 	}
+	
 	public String getEmail() {
 		return email;
 	}
