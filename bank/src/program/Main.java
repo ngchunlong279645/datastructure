@@ -23,8 +23,9 @@ public class Main {
 		 PersonList people = new PersonList(size);
 		 
 		 do {
+			 System.out.println("-------------------------------------WELCOME TO YYDS BANK-------------------------------------\n");
 			 System.out.println("1-ADDFIRST,2-ADDBTW,3-ADDLAST,4-REMOVEFIRST,5-REMOVEBTW,6-REMOVELAST,7-EDIT,8-SEARCH,9-DISPLAY");
-			 System.out.println("Select option : ");
+			 System.out.print("\nSelect option : ");
 			 int option = scan.nextInt();
 			 if(option==1) {
 				    setInfo();
@@ -61,7 +62,7 @@ public class Main {
 			 else if(option==9) {
 				 	people.displayRecord();
 			 }
-			 System.out.println("DO U WAN CONTINUE y-yes n-no");
+			 System.out.println("DO U WAN CONTINUE (y-yes n-no)");
 			 choice = scan.next().charAt(0);
 		 }while(choice=='y');
 	}
