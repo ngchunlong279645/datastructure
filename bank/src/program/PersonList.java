@@ -105,13 +105,13 @@ public class PersonList {
 	
 	public void search(int index){
 		  System.out.println("\nFirst Name ="+myList[index].getFirstName());
-		  System.out.println("\nLast Name ="+myList[index].getLastName());
+		  System.out.println("Last Name ="+myList[index].getLastName());
 		  System.out.println("Age = "+myList[index].getAge());
 		  System.out.println("Gender = "+myList[index].getGender());
-		  System.out.println("\nEmail ="+myList[index].getEmail());
-		  System.out.println("\nAccount Number ="+myList[index].getAccNum());
-		  System.out.println("\nPhone Number ="+myList[index].getPhoneNum());
-		  System.out.println("\nAccount Type ="+myList[index].getAccType());
+		  System.out.println("Email ="+myList[index].getEmail());
+		  System.out.println("Account Number ="+myList[index].getAccNum());
+		  System.out.println("Phone Number ="+myList[index].getPhoneNum());
+		  System.out.println("Account Type ="+myList[index].getAccType());
 	}
 	
 	public void edit(int index,String firstName, String lastName, int age, char gender, String email, int accNum, int phoneNum, String accType) {
